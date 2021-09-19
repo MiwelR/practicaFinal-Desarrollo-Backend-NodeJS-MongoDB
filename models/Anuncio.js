@@ -10,7 +10,7 @@ const anuncioSchema = mongoose.Schema({
     foto: String,
     tags: [String]
 }, {
-  // collection: 'anuncios'
+  
 });
 
 anuncioSchema.statics.lista = function(filtro, skip, limit, select, sort) {

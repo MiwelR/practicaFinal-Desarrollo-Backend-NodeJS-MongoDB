@@ -42,6 +42,7 @@ router.get('/', async (req, res, next) => {
     }
     });
 
+
     // GET /apiv1/anuncios:id
     // Obtener un anuncio
     router.get('/:id', async (req, res, next) => {
@@ -56,7 +57,7 @@ router.get('/', async (req, res, next) => {
     });
 
 
-    // GET /apiv1/anuncios/
+    // GET /apiv1/anuncios/precioMIN/precioMAX
     // Filtrar por rango de precios
     router.get('/:precio1/:precio2', async (req, res, next) => {
     try {
@@ -69,20 +70,6 @@ router.get('/', async (req, res, next) => {
         next(err);
     }
     });
-
-    // router.get('/:precio', async (req, res, next) => {
-    // try {
-    //     const rango = req.params.precio;
-    //     console.log(rango);
-    //     rango.split('-');
-
-    //     const anuncio = await Anuncio.find({ precio: { $gt: rango[0], $lt: rango[1] } });
-
-    //     res.json({ result: anuncio });
-    // } catch (err) {
-    //     next(err);
-    // }
-    // });
 
 
     // POST /apiv1/anuncios
@@ -102,18 +89,6 @@ router.get('/', async (req, res, next) => {
     }
     });
 
-    // DELETE /apiv1/anuncios:id
-    // Elimina un anuncio
-    router.delete('/:id', async (req, res, next) => {
-    try {
-        const _id = req.params.id;
-
-        await Anuncio.deleteOne({ _id: _id });
-        res.json();
-    } catch (err) {
-        next(err);
-    }
-    });
 
     // PUT /apiv1/anuncios:id
     // Actualizar un anuncio
@@ -132,6 +107,20 @@ router.get('/', async (req, res, next) => {
         }
 
         res.json({ result: anuncioActualizado });
+    } catch (err) {
+        next(err);
+    }
+    });
+
+
+    // DELETE /apiv1/anuncios:id
+    // Elimina un anuncio
+    router.delete('/:id', async (req, res, next) => {
+    try {
+        const _id = req.params.id;
+
+        await Anuncio.deleteOne({ _id: _id });
+        res.json();
     } catch (err) {
         next(err);
     }

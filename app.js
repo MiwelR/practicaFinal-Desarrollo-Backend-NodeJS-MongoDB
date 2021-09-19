@@ -7,7 +7,7 @@ const utils = require('./lib/utils');
 
 var app = express();
 
-// conectamos a la base de datos
+// Conexión con Base de Datos
 require('./lib/connectMongoose');
 
 // view engine setup
@@ -21,19 +21,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 /**
- * Rutas de mi API
+ * Rutas de la API
  */
 app.use('/apiv1/anuncios',   require('./routes/apiv1/anuncios'));
 
-// variables globales de las vistas
-app.locals.title = 'NodeAPI';
+// Variables globales de las vistas
+app.locals.title = 'NodePop';
 
 /**
- * Rutas de mi website
+ * Rutas del website
  */
 app.use('/',      require('./routes/index'));
-app.use('/users', require('./routes/users'));
-// app.use('/facturas', require('./routes/facturas'));
+// app.use('/users', require('./routes/users'));
 
 
 // catch 404 and forward to error handler

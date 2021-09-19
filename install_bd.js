@@ -1,9 +1,9 @@
 'use strict';
 
-// conexion a la base de datos
+// Conexión con la Base de Datos
 const dbConnection = require('./lib/connectMongoose');
 
-// modelo de agentes
+// Modelo de Anuncios
 const Anuncio = require('./models/Anuncio');
 const anuncioData = require('./anuncios.json');
 
@@ -17,11 +17,11 @@ async function main() {
 }
 
 async function initAnuncios() {
-  // elimino todos los documentos de la colección de agentes
+  // Eliminar todos los anuncios existentes
     const deleted = await Anuncio.deleteMany();
     console.log(`Eliminados ${deleted.deletedCount} anuncios.`);
 
-  // crear agentes iniciales
+  // Crear anuncios por defecto
     const anuncios = await Anuncio.insertMany(anuncioData.anuncios);
     console.log(`Creados ${anuncios.length} anuncios.`);
 }
