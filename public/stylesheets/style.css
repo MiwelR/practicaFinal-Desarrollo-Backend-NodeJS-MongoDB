@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+h1 {
+  color: rgb(46, 161, 46);
+}
+
+h2, h3 {
+  color: rgb(34, 112, 34);
+}
+
+.titleApp {
+  padding: 3rem;
+  text-align: left;
+}
+
+.article {
+  text-align: center;
+  width: 32vw;
+  margin-bottom: 1.5rem;
+  /* padding-left: .5rem;
+  padding-right: .5rem; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  /* padding: 0.5rem 1rem; */
+}

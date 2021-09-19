@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "1f891597-9054-4b81-be29-0744525d6867",
+		"name": "Proyecto Backend Node.js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "apiv1/anuncios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios/?nombre=Bicicleta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios/?nombre=Bicicleta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Bicicleta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios/10/150",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios/10/150",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios",
+						"10",
+						"150"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios/?tags=lifestyle&sort=precio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios/?tags=lifestyle&sort=precio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "lifestyle"
+						},
+						{
+							"key": "sort",
+							"value": "precio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Playstation 4",
+							"type": "text"
+						},
+						{
+							"key": "venta",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "http://localhost:3000/images/playstation4.jpg",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "lifestyle",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "videogame",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Playstation 5",
+							"type": "text"
+						},
+						{
+							"key": "venta",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "400",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "http://localhost:3000/images/playstation5.jpg",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "lifestyle",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "videogame",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios/6147716ab0fe76a7b37029be",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios",
+						"6147716ab0fe76a7b37029be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apiv1/anuncios/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/apiv1/anuncios/614752fdaa9c1e3f05369592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiv1",
+						"anuncios",
+						"614752fdaa9c1e3f05369592"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

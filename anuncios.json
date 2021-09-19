@@ -1,0 +1,18 @@
+{
+  "anuncios": [
+    {
+      "nombre": "Bicicleta",
+      "venta": true,
+      "precio": 230.15,
+      "foto": "http://localhost:3000/images/bicicleta.jpg",
+      "tags": [ "lifestyle", "motor"]
+    },
+    {
+      "nombre": "iPhone",
+      "venta": false,
+      "precio": 50.00,
+      "foto": "http://localhost:3000/images/iphone.jpg",
+      "tags": [ "lifestyle", "mobile"]
+    }
+  ]
+}

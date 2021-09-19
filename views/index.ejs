@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="titleApp">
+    <h1><%= title %></h1>
+    <h2>Bienvenido a <%= title %></h2>
+    <h3>APP de Compra/Venta de artículos</h3>
+    </div>
+
+    <div class="container">
+    <% anuncios.forEach( anuncios=> { %>
+      <div class="article">
+        
+        <img src="<%= anuncios.foto %>" alt="<%= anuncios.nombre %>"> <br>
+
+        <% if(anuncios.venta === true){ %>
+          <h5>Estado Artículo: En Venta </h5>
+        <% } else { %>
+            <h5>Estado Artículo: Se Compra </h5>
+        <% } %>
+
+        <br>
+
+        Título del Anuncio: <%= anuncios.nombre %><br> 
+        Precio: <%= anuncios.precio %>€. <br> <br>
+        Tags: <%= anuncios.tags %>
+
+        <br><br>
+
+      </div>
+    <% }) %>
+    </div>
+  </body>
+</html>
